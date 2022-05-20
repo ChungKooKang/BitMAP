@@ -1,7 +1,7 @@
 #include <windows.h>
-#include "D2DFramework.h"
+#include "BitmapExample.h"
 
-D2DFramework myFramework;
+BitmapExample myFramework;
 
 
 int WINAPI WinMain(
