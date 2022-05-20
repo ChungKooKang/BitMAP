@@ -49,7 +49,7 @@ protected :
 	virtual HRESULT CreateDeviceResources();
 
 public :
-	virtual void Initialize(HINSTANCE hInstance, LPCWSTR title = L"D2DFramework", UINT width = 1024, UINT height = 768);
+	virtual HRESULT Initialize(HINSTANCE hInstance, LPCWSTR title = L"D2DFramework", UINT width = 1024, UINT height = 768);
 	virtual void Release();
 	virtual void Render();
 	virtual int GameLoop();

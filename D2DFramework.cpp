@@ -92,15 +92,20 @@ HRESULT D2DFramework::CreateDeviceResources()
 }
 
 
-void D2DFramework::Initialize(HINSTANCE hInstance, LPCWSTR title, UINT width, UINT height)
+HRESULT D2DFramework::Initialize(HINSTANCE hInstance, LPCWSTR title, UINT width, UINT height)
 {
-	InitWindow(hInstance, title, width, height);
-	InitD2D(mHwnd);
+	HRESULT hr;
+	hr = InitWindow(hInstance, title, width, height);
+	ThrowIfFailed(hr);
+
+	hr = InitD2D(mHwnd);
+	ThrowIfFailed(hr);
 
 
 	ShowWindow(mHwnd, SW_SHOW);
 	UpdateWindow(mHwnd);
 
+	return hr;
 }
 
 void D2DFramework::Release()
