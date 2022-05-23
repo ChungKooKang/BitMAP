@@ -88,7 +88,7 @@ HRESULT D2DFramework::CreateDeviceResources()
 	);
 
 	ThrowIfFailed(hr);
-	return E_NOTIMPL;
+	return S_OK;
 }
 
 
