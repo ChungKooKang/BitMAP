@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 #include "D2DFramework.h"
 
 const int BITMAP_WIDTH{ 1024 };
@@ -20,7 +21,6 @@ public :
 	void DrawPixelToBuffer(int x, int y, D2D1::ColorF color);
 	void ClearBuffer(D2D1::ColorF color);
 	void FillRectToBuffer(int left, int top, int width, int height, D2D1::ColorF color);
-
-
+	void DrawCircleToBuffer(int centerX, int centerY, int radius, D2D1::ColorF color);
 };
 
